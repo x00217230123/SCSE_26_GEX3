@@ -1,3 +1,4 @@
+import torch
 from datasets import load_dataset
 from transformers import AutoTokenizer
 from peft import AutoPeftModelForCausalLM
@@ -7,7 +8,8 @@ MODEL_PATH = "models/domain_adapter"
 
 model = AutoPeftModelForCausalLM.from_pretrained(
     MODEL_PATH,
-    is_trainable=True
+    is_trainable=True,
+    dtype="auto"
 )
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 
@@ -39,6 +41,7 @@ def format_example(example):
 data = data.map(format_example)
 
 config = SFTConfig(
+    bf16=torch.cuda.is_available() and torch.cuda.is_bf16_supported(),
     output_dir="models/specialized_adapter_v2",
     num_train_epochs=1, # 1 epoch is perfect for preventing memorization!
     per_device_train_batch_size=2,

@@ -35,7 +35,8 @@ model = (
     AutoPeftModelForCausalLM
     .from_pretrained(
         MODEL_PATH,
-        is_trainable=True
+        is_trainable=True,
+        dtype="auto"
     )
 )
 
@@ -92,6 +93,7 @@ dataset = dataset.map(
 
 
 config = SFTConfig(
+    bf16=torch.cuda.is_available() and torch.cuda.is_bf16_supported(),
     output_dir=
         "models/specialized_adapter",
     num_train_epochs=3,
