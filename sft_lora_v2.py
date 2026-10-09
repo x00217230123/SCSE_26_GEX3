@@ -41,6 +41,8 @@ def format_example(example):
 data = data.map(format_example)
 
 config = SFTConfig(
+    # Avoid redundant forward recomputation on CPU; retain GPU memory savings.
+    gradient_checkpointing=torch.cuda.is_available(),
     bf16=torch.cuda.is_available() and torch.cuda.is_bf16_supported(),
     output_dir="models/specialized_adapter_v2",
     num_train_epochs=1, # 1 epoch is perfect for preventing memorization!

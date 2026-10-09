@@ -93,6 +93,8 @@ dataset = dataset.map(
 
 
 config = SFTConfig(
+    # Avoid redundant forward recomputation on CPU; retain GPU memory savings.
+    gradient_checkpointing=torch.cuda.is_available(),
     bf16=torch.cuda.is_available() and torch.cuda.is_bf16_supported(),
     output_dir=
         "models/specialized_adapter",
