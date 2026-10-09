@@ -1,0 +1,93 @@
+{
+  "completed_at_utc": "2026-10-09T15:08:36.522912+00:00",
+  "model": "Qwen/Qwen3-0.6B",
+  "device": "CPU",
+  "base_weight_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "shared_domain_adapter_sha256": "863b72a1a8e3b461cba01f8b62736113407b967b334f4ebf731af37f46cb44c6",
+  "domain": {
+    "epochs_completed": 2.0,
+    "steps_completed": 1076,
+    "resumed_from_step": 538,
+    "final_evaluation": {
+      "epoch": 2.0,
+      "eval_loss": 0.13040050864219666,
+      "eval_runtime": 25.9834,
+      "eval_samples_per_second": 4.618,
+      "eval_steps_per_second": 2.309,
+      "step": 1076
+    }
+  },
+  "versions": {
+    "V1": {
+      "epochs_completed": 3.0,
+      "steps_completed": 966,
+      "test_questions": 15,
+      "output_sha256": "ab0d0b7d15ec31e4af197cca68bc2a84467b461a5de40826d3211a90d62631f7",
+      "final_evaluation": {
+        "epoch": 3.0,
+        "eval_entropy": 0.7360026041666666,
+        "eval_loss": 3.2170413760468364e-05,
+        "eval_mean_token_accuracy": 1.0,
+        "eval_num_tokens": 94083.0,
+        "eval_runtime": 17.8297,
+        "eval_samples_per_second": 4.038,
+        "eval_steps_per_second": 2.019,
+        "step": 966
+      }
+    },
+    "V2": {
+      "epochs_completed": 1.0,
+      "steps_completed": 44,
+      "test_questions": 15,
+      "output_sha256": "053401318c919b6c317be8d7ca74c9c1706047f1ab89f6c4829f01c136c767cd",
+      "final_evaluation": {
+        "epoch": 1.0,
+        "eval_entropy": 2.26171875,
+        "eval_loss": 2.2778115272521973,
+        "eval_mean_token_accuracy": 0.5899997353553772,
+        "eval_num_tokens": 6741.0,
+        "eval_runtime": 2.3715,
+        "eval_samples_per_second": 3.373,
+        "eval_steps_per_second": 1.687,
+        "step": 44
+      }
+    },
+    "V3": {
+      "epochs_completed": 1.0,
+      "steps_completed": 324,
+      "test_questions": 15,
+      "output_sha256": "5006eb1e07607b611ee991ff139fcc2781eab35d7147007345bfa0ea17739bfc",
+      "final_evaluation": {
+        "epoch": 1.0,
+        "eval_entropy": 1.055908203125,
+        "eval_loss": 0.003330718260258436,
+        "eval_mean_token_accuracy": 1.0,
+        "eval_num_tokens": 51412.0,
+        "eval_runtime": 9.4473,
+        "eval_samples_per_second": 3.387,
+        "eval_steps_per_second": 1.694,
+        "step": 324
+      }
+    }
+  },
+  "test_generation": {
+    "prompt": "Original exercise prompt, identical across versions",
+    "do_sample": false,
+    "max_new_tokens": 100,
+    "output_tokens_only": true
+  },
+  "versions_installed": {
+    "torch": "2.14.1+cpu",
+    "transformers": "4.57.6",
+    "datasets": "5.0.1",
+    "peft": "0.21.2",
+    "trl": "0.25.1",
+    "accelerate": "1.15.0"
+  },
+  "notes": [
+    "Domain epoch 2 resumed from checkpoint-538 after the temporary environment was cleared.",
+    "Final V2 was rerun so all final versions start from exactly the same completed domain adapter.",
+    "Outputs are genuine model responses; file completeness does not mean every answer is correct.",
+    "The RAG phone-number and guest-WiFi inference checks are recorded separately in the RAG repository."
+  ]
+}

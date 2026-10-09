@@ -29,8 +29,20 @@ original exercise prompt so versions are evaluated consistently.
 ## Submission
 
 Submit only the three generated text files and your own RAG GitHub repository URL.
-The prepared code is not a replacement for running training. No SFT results are
-included or invented. RAG model inference also remains to be run with Qwen3-0.6B.
+The three checked-in text files contain genuine Qwen3-0.6B model responses to
+all 15 exercise challenge questions. `TRAINING_RESULTS.json` records the completed
+epochs, steps, evaluation results, output hashes, and installed package versions.
+All final SFT versions use the same completed domain adapter. The domain job was
+resumed from its first-epoch checkpoint after the temporary environment was lost.
+
+These files record actual model behavior, including incorrect answers; file
+completeness does not imply that every answer is correct. The RAG repository
+contains `RAG_Runtime_Test.json` with genuine Qwen3-0.6B inference checks for the
+missing phone number and guest Wi-Fi questions. The original policy loader and
+policy data are unchanged.
+
+Use the package versions in `TRAINING_RESULTS.json` to reproduce this run.
+Model weights and adapters are distributed separately and are not committed here.
 
 The original PDF states October 10, midnight. Confirm the course's exact timezone
 and interpretation of midnight if it is not stated in the submission portal.

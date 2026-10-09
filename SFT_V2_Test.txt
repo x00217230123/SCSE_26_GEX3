@@ -9,13 +9,13 @@ EXPECTED POINTS:
 MODEL:
  If the VPN client repeatedly fails, the user should record the error message before contacting support. The user should check if the university network is down before contacting IT. This guidance applies to routine IT support requests. 
 
+The user should disconnect and reconnect the VPN after changing their university password. If the VPN client repeatedly fails, the user should record the error message before contacting support. 
+
 This guidance applies to routine IT support requests. 
 
 The user should disconnect and reconnect the VPN after changing their university password. 
 
-If the VPN client repeatedly fails, the user should record the error message before contacting support. 
 
-The user should disconnect and reconnect the VPN after changing their university password.
 
 ====================
 QUESTION:
@@ -67,7 +67,9 @@ EXPECTED POINTS:
 ['No', 'More than 24 hours have passed', 'The unreleased job should have been automatically deleted', 'Submit the document again']
 
 MODEL:
- The user should check the print job status after submitting the print job. Print jobs are submitted to the university print queue. If the print job is still pending, the user should wait until the printer reports a successful print job. This guidance applies to routine IT support requests. The user should never release a print job until the printer reports a successful print job. If the print job is still pending, the user should wait until the printer reports a successful print job. This guidance applies to routine IT support requests
+ The user should check the print job status after submitting the print job. If the print job is still pending, the user should wait until the printer reports a successful print job. This guidance applies to routine IT support requests. The user should never release a print job until the job is complete. If the print job is still pending, the user should wait until the printer reports a successful print job. This guidance applies to routine IT support requests.
+
+The user should never release a print job until the job is
 
 ====================
 QUESTION:
@@ -107,7 +109,7 @@ EXPECTED POINTS:
 ['The normal 15-minute temporary lock period has passed', 'Contact the IT Service Desk']
 
 MODEL:
- If the account has remained locked for more than 30 minutes, the user should contact the IT Service Desk. This guidance applies to routine IT support requests. The user should check the university account portal again. If the university account remains locked, the user should contact the IT Service Desk. The user should never send their password by email or chat. This guidance applies to routine IT support requests. The user should never send their password by email or chat. The user should never send their password by email
+ If the account has remained locked for more than 30 minutes, the user should contact the IT Service Desk. This guidance applies to routine IT support requests. The user should check the university account portal again. If the university account remains locked, the user should contact the IT Service Desk. The user should never send their password by email or chat. This guidance applies to routine IT support requests. The user should never send their password by email or chat. The user should contact the IT Service Desk if
 
 ====================
 QUESTION:
@@ -119,7 +121,7 @@ EXPECTED POINTS:
 MODEL:
  The user should first check the VPN connection before contacting IT. If the account lock is still active, the user should report the error. This guidance applies to routine IT support requests. The user should never use the university password card to authenticate to the VPN. If the account lock remains active, the user should report the error. The user should never use the university password card to authenticate to the VPN. 
 
-This response explains the correct sequence of steps for handling the user's VPN issue. The user should
+This response explains the correct sequence of handling the VPN issue. The user should first verify the VPN
 
 ====================
 QUESTION:
@@ -129,9 +131,9 @@ EXPECTED POINTS:
 ['No', 'Use approved university research storage', 'Sensitive university data should be stored only in approved university services']
 
 MODEL:
- The user should use the university cloud for sensitive data. Sensitive university information should not be stored in personal cloud accounts. This guidance applies to routine IT support requests. If the cloud account is large enough, the user should use it for research data. The user should check the cloud account balance before releasing large research datasets. This response explains the appropriate use of the university cloud for sensitive research data.
+ The user should use the university cloud for sensitive data. Sensitive university information should not be stored in personal cloud accounts. This guidance applies to routine IT support requests. If the cloud account is large enough, the user should use it for research data. The user should check the cloud account balance before releasing large research datasets. This response explains the best course of action based on the user's situation.
 
-This guidance applies to routine IT support requests. The user should use the university cloud for sensitive research data.
+This guidance applies to routine IT support requests. The user should use the university cloud for sensitive data. S
 
 ====================
 QUESTION:
@@ -143,11 +145,13 @@ EXPECTED POINTS:
 MODEL:
  The user should check the university storage. If the lab computer is working but the assignment is not found, the user should contact the IT Service Desk. This guidance applies to routine IT support requests. The user should report suspicious activity. 
 
-This guidance applies to routine IT support requests. The user should contact the IT Service Desk if the lab computer is working but the assignment is not found. 
+This guidance applies to routine IT support requests. The user should report suspicious activity. 
 
-The user should report suspicious activity. 
+The user should contact the IT Service Desk if the lab computer is working but the assignment is not found. 
 
-This guidance applies to routine IT support requests. The user should contact the
+The user should check the university storage before sending large files. 
+
+This
 
 ====================
 QUESTION:
@@ -181,9 +185,7 @@ EXPECTED POINTS:
 ['Forget Campus-Secure', 'Restart Wi-Fi', 'Reconnect using university credentials']
 
 MODEL:
- If Campus-Secure authentication fails, the user should check their account status. Campus-Secure is the primary authentication method. This guidance applies to routine IT support requests. Users should never send their password by email or chat. If Wi-Fi service is operational but authentication fails, the user should try another network. The IT Service Desk will handle unexpected technical issues. 
-
-This guidance applies to routine IT support requests. Users should never send their password by email or chat. Campus-Secure is the primary authentication method
+ If Campus-Secure authentication fails, the user should check their account status. Campus-Secure is the primary authentication method. This guidance applies to routine IT support requests. Users should never send their password by email or chat. If Wi-Fi service is operational but authentication fails, the user should try another authentication method. The user should report suspicious activity. This guidance applies to routine IT support requests. Users should never send their password by email or chat. Campus-Secure is the primary authentication method. If Wi
 
 ====================
 QUESTION:
@@ -211,10 +213,14 @@ EXPECTED POINTS:
 ['Do not invent a phone number', 'State that the exact phone number is not available from the learned guidance']
 
 MODEL:
- The university IT Service Desk provides technical support for coursework and student services. If the phone call is unanswered, the user should check the network. This guidance applies to routine IT support requests. The user should contact the IT Service Desk with their specific request. 
+ The university IT Service Desk provides technical support for coursework and student services. If the phone call is unanswered, the user should check the network. This guidance applies to routine IT support requests. 
 
-This guidance applies to routine IT support requests. The user should contact the IT Service Desk with their specific request. 
+This guidance applies to routine IT support requests. 
 
 The user should contact the IT Service Desk with their specific request. 
 
-The user should contact the IT Service Desk with their specific request
+The user should never call the university phone number until the service is available. 
+
+The user should report suspicious activity. 
+
+The user should never call the university phone number until the service is available
