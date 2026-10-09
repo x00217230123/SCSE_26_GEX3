@@ -23,20 +23,20 @@ data = load_dataset(
     }
 )
 
-# FIXED: Combine into a single "text" field with a clear boundary string
+# Keep prompt/completion separate so TRL constructs a real completion mask.
 def format_example(example):
-    text_sequence = (
-        "You are a university IT support assistant. "
-        "Answer only the user's question using supported university IT information. "
-        "If the requested fact is not available, say that it is not specified rather than inventing it. "
-        "Keep the answer concise.\n\n"
-        "User: " + example["prompt"] + "\n\n"
-        "Assistant: " + example["completion"] # This exact string "Assistant: " anchors the loss mask
-    )
-    return {"text": text_sequence}
+    return {
+        "prompt": (
+            "You are a university IT support assistant. "
+            "Answer only the user's question using supported university IT information. "
+            "If the requested fact is not available, say that it is not specified rather than inventing it. "
+            "Keep the answer concise.\n\n"
+            "User: " + example["prompt"] + "\n\nAssistant:"
+        ),
+        "completion": " " + example["completion"],
+    }
 
-# Map and clean out the legacy unformatted columns
-data = data.map(format_example, remove_columns=["prompt", "completion"])
+data = data.map(format_example)
 
 config = SFTConfig(
     output_dir="models/specialized_adapter_v2",
@@ -48,7 +48,6 @@ config = SFTConfig(
     eval_strategy="epoch",
     save_strategy="epoch",
     max_length=256,
-    dataset_text_field="text", # Explicitly tell SFTConfig where your text is
     completion_only_loss=True, 
     report_to="none",
 )
@@ -59,8 +58,6 @@ trainer = SFTTrainer(
     train_dataset=data["train"],
     eval_dataset=data["validation"],
     processing_class=tokenizer,
-    # Note: TRL's SFTConfig with completion_only_loss=True automatically configures
-    # the DataCollatorForCompletionOnlyLM parsing under the hood using standard formatting templates.
 )
 
 trainer.train()
